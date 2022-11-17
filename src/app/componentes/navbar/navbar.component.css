@@ -1,0 +1,41 @@
+.navbar{
+    background-color: rgba(0, 0, 0, 0.168);
+    display: flex;   
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 1em;   
+}
+
+
+.lbl-switch{
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    background-image: url("../../../assets/imagenes/switch.png");
+    background-size: cover;
+    
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+#btn-switch:checked~ .lbl-switch:after{
+    left:28px;
+}
+
+.lbl-switch:after{
+    position: absolute;
+    content:'';
+    width: 28px;
+    height: 28px;
+    background: rgb(73, 72, 72);
+    border-radius: 100px;
+    top: 2px;
+    left: 4px;
+    transition: 0.3s;
+}
+
+#btn-switch{
+    display: none;
+}

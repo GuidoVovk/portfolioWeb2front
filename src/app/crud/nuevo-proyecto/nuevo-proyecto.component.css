@@ -1,0 +1,6 @@
+.wrapper{
+    padding: 1.5rem;
+    background-color: var(--bg-card-color);
+    border-radius: 5px;
+    margin: 1rem 0;
+}

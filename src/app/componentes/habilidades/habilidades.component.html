@@ -1,0 +1,202 @@
+<!--HABILIDADES-CARDS-->
+
+<section id="habilidades">
+<div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="wrapper">
+            <div class="contenedor-nombre-añadir">
+                <h5 class="area_habilidad">FrontEnd</h5>
+                <div class="boton-nueva-habilidad" *ngIf="isAdmin">
+                    <button class="btn btn-outline-primary py-1 mb-3 me-1" (click)="showAddFront()">Añadir</button>
+                </div>
+            </div>
+            <div *ngIf="showFormFront" class="formulario mb-4 px-1">
+                <app-new-habilidades></app-new-habilidades>
+            </div>
+            <div *ngIf="showFormEdit" class="formulario mb-4">
+                <app-edit-hab-front></app-edit-hab-front>
+               </div>
+            <div class="progress_card" *ngFor="let Habilidades of habilidades">
+                <div class="contenedor_nombre">
+                    <div class="botones-edit-delete mt-2 d-flex float-end" *ngIf="isAdmin">
+                        <button class="btn button-edit" (click)="showEdit()" routerLink="/editHabilidades/{{Habilidades.id}}"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-pencil-square text-warning" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg></button>
+                        <button class="btn  button-delete" (click)="onDelete(Habilidades.id)"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-trash text-danger" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                <path fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                            </svg></button>
+                    </div>
+                    <p class="nombre_habilidad text-capitalize">
+                        {{Habilidades.nombreHab}}
+                    </p>
+                </div>
+                <div class="progress mt-1">
+
+                    <div class="progress-bar" role="progressbar" aria-label="Example with label"
+                        [style.width.%]="Habilidades.porcentajeHab" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100">{{Habilidades.porcentajeHab}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--BACK-END-CARD-->
+
+    <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="wrapper">
+            <div class="contenedor-nombre-añadir">
+                <h5 class="area_habilidad">BackEnd</h5>
+                <div class="boton-nueva-habilidad" *ngIf="isAdmin">
+                    <button class="btn btn-outline-success py-1 mb-3 me-1" (click)="showAddBack()">Añadir</button>
+                </div>
+            </div>
+            <div *ngIf="showFormBack" class="formulario mb-4 px-1">
+                <app-new-hab-back></app-new-hab-back>
+            </div>
+            <div *ngIf="showFormEditB" class="formulario mb-4">
+                <app-edit-hab-back></app-edit-hab-back>
+               </div>
+            <div class="progress_card" *ngFor="let HabB of habBack">
+                <div class="contenedor_nombre">
+                    <div class="botones-edit-delete mt-2 d-flex float-end" *ngIf="isAdmin">
+                        <button class="btn button-edit" (click)="showEditB()" routerLink="/editHabB/{{HabB.id}}"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-pencil-square text-warning" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg></button>
+                        <button class="btn  button-delete" (click)="onDeleteB(HabB.id)"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-trash text-danger" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                <path fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                            </svg></button>
+                    </div>
+                    <p class="nombre_habilidad text-capitalize">
+                        {{HabB.nombreHabBack}}
+                    </p>
+                </div>
+                <div class="progress mt-1">
+
+                    <div class="progress-bar bg-success" role="progressbar" aria-label="Example with label"
+                    [style.width.%]="HabB.porcentajeHabBack" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">{{HabB.porcentajeHabBack}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--DISEÑO-CARD-->
+
+    <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="wrapper">
+            <div class="contenedor-nombre-añadir">
+                <h5 class="area_habilidad">Design</h5>
+                <div class="boton-nueva-habilidad" *ngIf="isAdmin">
+                    <button class="btn btn-outline-warning py-1 mb-3 me-1" (click)="showAddDesign()">Añadir</button>
+                </div>
+            </div>
+            <div *ngIf="showFormDesign" class="formulario mb-4 px-1">
+                <app-new-hab-design></app-new-hab-design>
+            </div>
+            <div *ngIf="showFormEditD" class="formulario mb-4">
+                <app-edit-hab-design></app-edit-hab-design>
+               </div>
+            <div class="progress_card" *ngFor="let HabD of habDesign">
+                <div class="contenedor_nombre">
+                    <div class="botones-edit-delete mt-2 d-flex float-end" *ngIf="isAdmin">
+                        <button class="btn button-edit" (click)="showEditD()" routerLink="/editHabD/{{HabD.id}}"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-pencil-square text-warning" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg></button>
+                        <button class="btn  button-delete" (click)="onDeleteD(HabD.id)"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-trash text-danger" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                <path fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                            </svg></button>
+                    </div>
+                    <p class="nombre_habilidad text-capitalize">
+                        {{HabD.nombreHabDesign}}
+                    </p>
+                </div>
+                <div class="progress mt-1">
+
+                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Example with label"
+                    [style.width.%]="HabD.porcentajeHabDesign" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">{{HabD.porcentajeHabDesign}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--HABILIDADES BLANDAS-CARD-->
+
+    <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="wrapper">
+            <div class="contenedor-nombre-añadir">
+                <h5 class="area_habilidad">Soft Skills</h5>
+                <div class="boton-nueva-habilidad" *ngIf="isAdmin">
+                    <button class="btn btn-outline-info py-1 mb-3 me-1" (click)="showAddSoft()">Añadir</button>
+                </div>
+            </div>
+            <div *ngIf="showFormSoft" class="formulario mb-4 px-1">
+                <app-new-hab-soft></app-new-hab-soft>
+            </div>
+            <div *ngIf="showFormEditS" class="formulario mb-4">
+                <app-edit-hab-soft></app-edit-hab-soft>
+               </div>
+            <div class="progress_card" *ngFor="let HabS of habSoft">
+                <div class="contenedor_nombre">
+                    <div class="botones-edit-delete mt-2 d-flex float-end" *ngIf="isAdmin">
+                        <button class="btn button-edit" (click)="showEditS()" routerLink="/editHabS/{{HabS.id}}"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-pencil-square text-warning" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg></button>
+                        <button class="btn  button-delete" (click)="onDeleteS(HabS.id)"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-trash text-danger" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                <path fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                            </svg></button>
+                    </div>
+                    <p class="nombre_habilidad text-capitalize">
+                        {{HabS.nombreHabSoft}}
+                    </p>
+                </div>
+                <div class="progress mt-1">
+
+                    <div class="progress-bar bg-info" role="progressbar" aria-label="Example with label"
+                        [style.width.%]="HabS.porcentajeHabSoft" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">{{HabS.porcentajeHabSoft}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</section>

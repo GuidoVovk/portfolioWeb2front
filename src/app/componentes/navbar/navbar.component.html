@@ -1,0 +1,18 @@
+
+
+<!--<header class="header animate__animated animate__fadeInDown">!-->
+  <nav class="navbar fixed-top">
+    <div class="switch mt-1">
+      <div class="check">
+        <input mdbCheckbox (click)="switchTheme()" class="check-input"
+          type="checkbox"
+          id="btn-switch"
+        />
+        <label class="lbl-switch" for="btn-switch"
+          ></label
+        >
+      </div>
+      <!--<button class="toggle" (click)="switchTheme()">{{theme === 'light-theme' ? 'Dark'  : 'Light'}}</button>!-->
+    </div>
+    <app-menu></app-menu>
+  </nav>

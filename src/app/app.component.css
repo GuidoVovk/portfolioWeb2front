@@ -1,0 +1,44 @@
+*{
+    background-image: url("../assets/imagenes/fondoRetro.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.row{
+   padding-top: 2rem;
+}
+
+
+.izq {
+    padding: 0 1.5rem;
+   
+}
+
+.derecha{
+    padding:0 1.5rem;
+    padding-bottom: 1rem;
+    height: 100vh;
+    position: relative;
+    overflow-y: auto;
+
+}
+
+@media screen and (min-width: 760px) {
+    .derecha{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    *{
+        background-image: url("../assets/imagenes/fondoRetroSmall.png");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+

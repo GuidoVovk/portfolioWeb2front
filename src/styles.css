@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+
+
+img{
+    max-width: 100%;
+}
+
+.light-theme{
+    --bg-color: hsl(0, 0%, 80%);
+    --bg-color2: hsla(0, 0%, 80%, 0.8);
+    --text-color: hsl(0, 0%, 20%);
+    --text-color-secondary:rgb(131, 128, 128);
+    --box-color: hsl(0, 0%, 95%);
+    --button-color: hsl(0, 0%, 95%);
+    --box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    --bg-card-color: hsl(0, 0%, 100%);
+    --text-color-special: #54a5b7;
+    
+}
+
+.dark-theme{
+    --bg-color: hsl(0, 0%, 10%);
+    --bg-color2: hsla(0, 0%, 10%, 0.8);
+    --text-color: hsl(0, 0%, 90%);
+    --text-color-secondary:rgb(150, 145, 145);
+    --box-color: hsl(0, 0%, 5%);
+    --button-color: hsl(0, 0%, 5%);
+    --bg-card-color: hsl(0, 4%, 14%);
+    --border-botton: 1px black;
+    --text-color-special: #fadf38;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    font-family:'IBM Plex Sans', sans-serif;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+.text{
+    color: var(--text-color);
+}
+
+section[id]{
+    scroll-margin-top: 72px;
+}

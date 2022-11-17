@@ -1,0 +1,33 @@
+.wrapper{
+    padding: 1.5rem;
+    border: 1px solid var(--text-color-special);
+    border-radius: 5px;
+    margin-top: 1rem;
+    
+}
+
+
+.area_habilidad{
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.nombre_habilidad{
+    margin: 0;
+    padding: 0;
+}
+
+.progress{
+    margin-bottom: 1rem;
+}
+
+.nombre_habilidad{
+    font-weight: bolder;
+    font-size: .8rem;
+}
+
+.contenedor-nombre-añadir{
+    display: flex;
+    justify-content: space-between;
+}
+

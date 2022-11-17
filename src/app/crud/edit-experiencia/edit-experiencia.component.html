@@ -1,0 +1,29 @@
+<div class="contenedor">
+    <div class="formulario text-start" *ngIf="experiencia">
+        <form (ngSubmit)="onUpdate()" novalidate #f='ngForm'>
+            <div class="form-group mb-3">
+                <label for="nombreExp">Cargo</label>
+                <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="experiencia.nombreExp"
+                    required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="nombreEmpresa">Empresa</label>
+                <input type="text" class="form-control" id="nombreEmpresa" name="nombreEmpresa"
+                    [(ngModel)]="experiencia.nombreEmpresa" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="fechaExp">Fecha</label>
+                <input type="text" class="form-control" id="fechaExp" name="fechaExp" [(ngModel)]="experiencia.fechaExp" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="descripcionExp">Descripción</label>
+                <input type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="experiencia.descripcionExp" required>
+            </div>
+            <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-success">
+                    Actualizar experiencia
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

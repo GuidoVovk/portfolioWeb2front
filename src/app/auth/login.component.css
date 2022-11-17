@@ -1,0 +1,22 @@
+
+
+.wrapper{
+    padding: 2rem 1.5rem;
+    background-color: var(--bg-card-color);
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.row{
+    height: 100vh;
+}
+
+.btn{
+    color: var(--text-secondary);
+}
+.btn:hover{
+    background-color: var(--text-color);
+    color: var( --bg-card-color);
+}
+

@@ -1,0 +1,15 @@
+.home{
+    padding: 1.5rem;
+    background-color: var(--bg-card-color);
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.texto{
+    color: var(--text-color-special);
+}
+
+
+
+
+

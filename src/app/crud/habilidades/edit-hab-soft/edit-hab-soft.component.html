@@ -1,0 +1,21 @@
+<div class="contenedor">
+    <div class="formulario text-start" *ngIf="habSoft">
+        <form (ngSubmit)="onUpdate()" novalidate #f='ngForm'>
+            <div class="form-group mb-3">
+                <label for="nombreHabSoft">Habilidad</label>
+                <input type="text" class="form-control" id="nombreHabSoft" name="nombreHabSoft" [(ngModel)]="habSoft.nombreHabSoft"
+                    required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="porcentajeHabSoft">Porcentaje</label>
+                <input type="text" class="form-control" id="porcentajeHabSoft" name="porcentajeHabSoft"
+                    [(ngModel)]="habSoft.porcentajeHabSoft" required>
+            </div>
+            <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-outline-info">
+                    Actualizar habilidad
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
