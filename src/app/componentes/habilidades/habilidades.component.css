@@ -31,3 +31,10 @@
     justify-content: space-between;
 }
 
+.nombre_habilidad{
+    color: var(--text-color);
+}
+
+.area_habilidad{
+    color: var(--text-color);
+}

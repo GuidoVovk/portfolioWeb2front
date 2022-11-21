@@ -50,3 +50,18 @@ li p{
     padding: 0 0.2rem;
 }
 
+.titulo{
+    color: var(--text-color);
+}
+
+.titulo_estudio{
+    color: var(--text-color);
+}
+
+.año{
+    color: var(--text-color);
+}
+
+.descripcion{
+    color: var(--text-color);
+}

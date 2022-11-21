@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
 
   onLogOut():void{
     this.tokenService.logOut();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/index']);
   }
 
 }

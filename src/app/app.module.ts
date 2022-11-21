@@ -16,6 +16,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './interceptors/interceptor.service';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { NewEducacionComponent } from './crud/new-educacion/new-educacion.component';
 import { NewExperienciaComponent } from './crud/new-experiencia/new-experiencia.component';
 import { NewHabilidadesComponent } from './crud/new-habilidades/new-habilidades.component';
@@ -33,6 +38,8 @@ import { EditHabSoftComponent } from './crud/habilidades/edit-hab-soft/edit-hab-
 import { EditHabFrontComponent } from './crud/edit-hab-front/edit-hab-front.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatComponent } from './componentes/mat/mat.component';
 
 @NgModule({
   declarations: [
@@ -62,14 +69,23 @@ import { HomeComponent } from './componentes/home/home.component';
     EditHabSoftComponent,
     EditHabFrontComponent,
     BannerComponent,
-    HomeComponent
+    HomeComponent,
+    MatComponent,
+   
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    MatToolbarModule
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]

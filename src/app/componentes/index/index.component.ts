@@ -9,12 +9,12 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class IndexComponent implements OnInit {
 
-  
+  isLogged = false;
 
   constructor(private tokenService: TokenService, private router: Router) { }
 
   ngOnInit(): void {
-    
+    this.isLogged = this.tokenService.isLogged();
   }
 
   alert(){
@@ -22,6 +22,13 @@ export class IndexComponent implements OnInit {
     this.router.navigate(['/login']);
     
    }
+
+   onLogOut():void{
+    this.tokenService.logOut();
+    this.router.navigate(['/login']);
+  }
+
+
 
 
 }

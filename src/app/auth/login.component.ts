@@ -32,8 +32,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.loginUsuario).subscribe(
       data => {
         this.tokenService.setToken(data.token);
-        this.router.navigate(['/home']);
-        window.location.reload()
+        this.router.navigate(['/inicio']);
       }, err =>{
         this.errMsj = err.error.message;
       }

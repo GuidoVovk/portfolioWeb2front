@@ -3,7 +3,8 @@
     display: flex;   
     justify-content: space-between;
     height: 40px;
-    padding: 0 1em;   
+    padding: 0 1em;
+    border-radius: 10px 10px 0 0;   
 }
 
 

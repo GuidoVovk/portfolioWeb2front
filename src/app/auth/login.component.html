@@ -1,25 +1,26 @@
 
-<div class="row justify-content-center align-items-center">
-    <div class="col-lg-6 col-sm-12">
+
+<div class="row align-items-center">
+    <div class="col col-lg-6 col-sm-12">
         <div class="wrapper">
-            <div class="header text-center">
+            <div class="header text-center text-light">
                 <h5 class="">Iniciar Sesión</h5>
             </div>
             <div class="card-body">
                 <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-                    <div class="form-group">
+                    <div class="form-group text-light">
                         <label for="nombreUsuario">Nombre de Usuario</label>
                         <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control" placeholder="user"
                             [(ngModel)]="nombreUsuario" required>
                     </div>
-                    <div class="form-group mt-3">
+                    <div class="form-group text-light mt-3">
                         <label for="password">Contraseña</label>
                         <input type="text" name="password" id="password" class="form-control" placeholder="user" [(ngModel)]="password"
                             required>
                     </div>
                     <div class="form-group">
                         <div class="d-grid gap-2 mt-4">
-                            <button class="btn btn-outline-secondary btn-block" [disabled]="!f.valid">Ver Portfolio</button>
+                            <button class="btn btn-outline-light btn-block" [disabled]="!f.valid">Ver Portfolio</button>
                         </div>
                     </div>
                 </form>

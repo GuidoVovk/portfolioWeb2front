@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,8 @@ import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  
 
   theme: Theme = 'light-theme'
 
@@ -16,6 +19,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.initializeTheme();
   }
+
 
   switchTheme(){
     this.document.body.classList.replace(this.theme, this.theme === 'light-theme' ? (this.theme = 'dark-theme') : (this.theme = 'light-theme'));

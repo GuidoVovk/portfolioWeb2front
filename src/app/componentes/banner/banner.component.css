@@ -1,7 +1,13 @@
-.contenedor{
+
+.banner{
     height: 100vh;
-    background-color: var(--bg-card-color);
-    padding: 2.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    background-color: rgba(62, 53, 53, 0.356);
+    padding: 2.5rem 2.5rem;
     margin-top: 1rem;
     border-radius: 5px;
 }
@@ -12,7 +18,7 @@ h1, h2, h3, h4{
 
 
 .nombre{
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding-top: 0.3rem;
     padding-bottom: 1rem;
     color: var(--text-color-special);
@@ -20,12 +26,18 @@ h1, h2, h3, h4{
 
 .puesto{
     font-size: 1.5rem;
-    color: var(--text-color-secondary)
+    color: whitesmoke;
 }
 
 .descripcion{
     padding: 1.5rem 0;
+    max-width: 400px;
     line-height: 1.5rem;
+    color: rgba(245, 245, 245, 0.812);
+}
+
+.titulo{
+    color: white;
 }
 
 .btn{
@@ -35,3 +47,20 @@ h1, h2, h3, h4{
     background-color: var(--text-color);
     color: var( --bg-card-color);
 }
+
+
+.boton{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    color:var(--text-color-special);
+    border: 1px solid var(--text-color-special);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.boton:hover{
+    background-color: var(--text-color-special);
+    color: white;
+}
+
