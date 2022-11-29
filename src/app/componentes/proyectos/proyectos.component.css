@@ -1,5 +1,5 @@
 .wrapper{
-    padding: 1.5rem;
+    padding: 1rem;
     border: 1px solid var(--text-color-special);
     border-radius: 5px;
     margin: 1rem 0;
@@ -36,6 +36,11 @@
 
 .button{
     text-decoration: none;
+    color: var(--text-color);
+}
+
+.button:hover{
+    color: var(--text-color-special);
 }
 
 .descripcion{

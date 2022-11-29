@@ -3,7 +3,6 @@
     border: 1px solid var(--text-color-special);
     border-radius: 5px;
     margin-top: 1rem;
-    
 }
 
 
@@ -19,6 +18,7 @@
 
 .progress{
     margin-bottom: 1rem;
+    background-color: hsl(0, 0%, 80%);
 }
 
 .nombre_habilidad{
@@ -38,3 +38,4 @@
 .area_habilidad{
     color: var(--text-color);
 }
+

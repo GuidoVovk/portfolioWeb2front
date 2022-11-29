@@ -50,8 +50,8 @@ ul{
 .contenedor_contacto{
     display: flex;
     justify-content: space-around;
-    padding: 1rem 0;
-    margin-top: 1.5rem;
+    padding: 2rem 0;
+    margin-top: 1rem; 
 }
 
 
@@ -70,6 +70,8 @@ ul{
     margin: 0;
     padding: 0;
 }
+
+
  .lista a{
     text-decoration:none;
     color: var(--text-color);
