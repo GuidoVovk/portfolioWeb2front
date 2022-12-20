@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'index', component: IndexComponent},
   { path: '', redirectTo: 'index', pathMatch:'full'},
   { path: 'editPerfil/:id', component: EditarPerfilComponent, canActivate: [guard], data: {expectedRol: ['admin']}},
-  { path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
+  { path: 'login', component: LoginComponent},
   { path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   { path: 'work/:id', component: HomeComponent },
   { path: 'cv/:id', component: CvComponent },

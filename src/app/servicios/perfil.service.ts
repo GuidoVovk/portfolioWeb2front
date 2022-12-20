@@ -9,7 +9,8 @@ import { Perfil } from '../modelos/perfil';
 export class PerfilService {
   
   
-  URL = 'http://localhost:8080/perfil/'
+  //URL = 'http://localhost:8080/perfil/'
+    URL = 'https://guido-back-guidoz86.koyeb.app/perfil/'
 
   constructor(private httpClient: HttpClient) { }
 

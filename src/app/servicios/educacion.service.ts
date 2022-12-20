@@ -8,7 +8,8 @@ import { Educacion } from '../modelos/educacion';
 })
 export class EducacionService {
 
-  URL = 'http://localhost:8080/educacion/'
+  //URL = 'http://localhost:8080/educacion/'
+  URL = 'https://guido-back-guidoz86.koyeb.app/educacion/'
 
   constructor(private httpClient: HttpClient) { }
 

@@ -4,27 +4,31 @@
     padding: 2rem 1.5rem;
     background-color: rgba(62, 53, 53, 0.356);
     border-radius: 5px;
-    margin-top: 1rem;
     box-shadow: var(--box-shadow);
     width: 500px;
 }
-
-.row{
-    height: 100vh;
-}
-
-
 
 .row{
     background-image: url("../../assets/imagenes/fondoRetro.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .col{
     display: flex;
     justify-content: center;
+    padding-left: 2rem;
+}
+
+@media screen and (max-width: 760px) {
+    .row{
+        background-image: url("../../assets/imagenes/fondoRetroSmall.png");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 

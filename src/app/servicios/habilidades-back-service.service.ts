@@ -8,7 +8,8 @@ import { HabilidadesBack } from '../modelos/habilidadesBack';
 })
 export class HabilidadesBackServiceService {
 
-  URL = 'http://localhost:8080/skillsBack/'
+  //URL = 'http://localhost:8080/skillsBack/'
+  URL = 'https://guido-back-guidoz86.koyeb.app/skillsBack/'
 
   constructor(private httpClient: HttpClient) { }
 

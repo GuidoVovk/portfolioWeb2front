@@ -8,7 +8,8 @@ import { Experiencia } from '../modelos/experiencia';
 })
 export class ExperienciaService {
 
-  URL = 'http://localhost:8080/explab/'
+  //URL = 'http://localhost:8080/explab/'
+  URL = 'https://guido-back-guidoz86.koyeb.app/explab/'
 
   constructor(private httpClient: HttpClient) { }
 

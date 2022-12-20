@@ -8,7 +8,8 @@ import { Proyectos } from '../modelos/proyectos';
 })
 export class ProyectosService {
 
-  URL = 'http://localhost:8080/proyectos/'
+  //URL = 'http://localhost:8080/proyectos/'
+  URL = 'https://guido-back-guidoz86.koyeb.app/proyectos/'
 
   constructor(private httpClient: HttpClient) { }
 

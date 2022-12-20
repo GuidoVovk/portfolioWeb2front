@@ -11,7 +11,9 @@ import { NuevoUsuario } from '../modelos/nuevo-usuario';
 })
 export class AuthService {
 
-  authURL = environment.authURL;
+  authURL = 'https://guido-back-guidoz86.koyeb.app/auth/';
+  //authURL = 'http://localhost:8080/auth/';
+  
 
   constructor(private httpClient: HttpClient) { }
 

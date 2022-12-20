@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-banner',
@@ -13,8 +14,18 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
   alert(){
-    alert('Puedes acceder al portfolio ingresando usuario: user  contraseña: user');
+    Swal.fire({
+      title: 'Puedes acceder al Portfolio ingresando usario:user password:user',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
     this.router.navigate(['/login']);
     
    }
