@@ -34,7 +34,7 @@ export class EditPoryectComponent implements OnInit {
         this.router.navigate(['/work']);
       }, err => {
         alert("error al modificar proyecto")
-        this.router.navigate([''])
+        this.router.navigate(['inicio'])
       }
     )
   }

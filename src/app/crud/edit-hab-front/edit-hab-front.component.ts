@@ -30,10 +30,10 @@ export class EditHabFrontComponent implements OnInit {
     const id = this.activatedRouted.snapshot.params['id'];
     this.habService.update(id, this.hab).subscribe(
       data => {
-        this.router.navigate(['habilidades']);
+        this.router.navigate(['/habilidades']);
       }, err => {
         alert("error al modificar educacion")
-        this.router.navigate([''])
+        this.router.navigate(['inicio'])
       }
     )
   }

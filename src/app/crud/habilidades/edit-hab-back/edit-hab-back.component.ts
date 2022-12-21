@@ -30,10 +30,10 @@ export class EditHabBackComponent implements OnInit {
     const id = this.activatedRouted.snapshot.params['id'];
     this.habBackS.update(id, this.habBack).subscribe(
       data => {
-        this.router.navigate(['habilidades']);
+        this.router.navigate(['/habilidades']);
       }, err => {
         alert("error al modificar educacion")
-        this.router.navigate([''])
+        this.router.navigate(['inicio'])
       }
     )
   }

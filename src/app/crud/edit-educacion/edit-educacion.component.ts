@@ -34,7 +34,7 @@ export class EditEducacionComponent implements OnInit {
         this.router.navigate(['/cv']);
       }, err => {
         alert("error al modificar educacion")
-        this.router.navigate([''])
+        this.router.navigate(['inicio'])
       }
     )
   }

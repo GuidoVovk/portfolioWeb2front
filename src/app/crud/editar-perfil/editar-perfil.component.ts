@@ -21,7 +21,7 @@ export class EditarPerfilComponent implements OnInit {
         this.perfil = data;
       }, err => {
         alert("Error al modificar perfil");
-        this.router.navigate([''])
+        this.router.navigate(['inicio'])
       }
     )
   }
@@ -31,10 +31,10 @@ export class EditarPerfilComponent implements OnInit {
     this.perfilService.update(id, this.perfil).subscribe(
       data => {
         alert("Perfil actualizado");
-        window.location.reload();
+        this.router.navigate(['inicio'])
       }, err => {
         alert("Error al modificar perfil");
-        this.router.navigate([''])
+        this.router.navigate(['inicio'])
         
       }
     )
