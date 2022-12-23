@@ -68,7 +68,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .wrapper{
         padding: 1rem .5rem;
     }
-    .home{
-        padding: .5rem 0;
+    .content{
+        margin: 0;
     }
 }
