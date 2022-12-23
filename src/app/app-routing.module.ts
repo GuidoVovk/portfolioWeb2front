@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   { path: 'work/:id', component: HomeComponent },
   { path: 'cv/:id', component: CvComponent },
-  { path: 'editProyect/:id', component: EditPoryectComponent },
+  { path: 'editProyect/:id', component: EditPoryectComponent, canActivate: [guard], data: {expectedRol: ['admin']}},
   { path: 'editHabilidades/:id', component: HabilidadesComponent },
   { path: 'editHabB/:id', component: HabilidadesComponent },
   { path: 'editHabD/:id', component: HabilidadesComponent },
