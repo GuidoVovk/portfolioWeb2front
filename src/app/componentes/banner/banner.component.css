@@ -21,7 +21,7 @@ h1, h2, h3, h4{
     font-size: 2.5rem;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
-    color: var(--text-color-special);
+    color: #fadf38;
 }
 
 .puesto{
@@ -53,15 +53,15 @@ h1, h2, h3, h4{
 .boton{
     font-size: 1rem;
     padding: .5rem 1rem;
-    color:var(--text-color-special);
-    border: 1px solid var(--text-color-special);
+    color:#fadf38;
+    border: 1px solid #fadf38;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
 }
 
 .boton:hover{
-    background-color: var(--text-color-special);
-    color: white;
+    background-color: #fadf38;
+    color: rgb(32, 29, 29);
 }
 
